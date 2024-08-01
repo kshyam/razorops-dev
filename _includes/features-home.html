@@ -1,7 +1,7 @@
 
   <style>
     .feature-section-home {
-      min-height: 600px !important;
+      min-height: 500px !important;
       vertical-align: middle !important;
     }
 
@@ -29,11 +29,17 @@
       margin-top: 160px !important;
     }
 
-    @media (max-width: 767px) {
+    .hide-in-laptop{
+        display: none;
+      }
+
+    @media screen and (max-width: 767px) {
+
       .feature-section-home {
         padding: 0px;
         margin-left: 10px;
         margin-top: -90px;
+        text-align: center !important;
       }
 
       .feature-section-home h2 {
@@ -42,9 +48,12 @@
         /* margin-top: 130px; */
       }
 
-      .feature-section-home img{
-        width: 80%;
+   
+
+      .img-center{
         text-align: center;
+        display: flex; 
+        align-items: center;
       }
 
       .feature-section-home p {
@@ -56,6 +65,12 @@
         color: #7C819B;
         white-space: pre-wrap;
       }
+
+      .hide-in-mobile {
+        display: none;
+      }
+     
+   
     }
   </style>
 
@@ -65,20 +80,23 @@
         <h2 class="mt-80">Fastest Continuous Integration Platform</h2>
         <p>Fastest Continuous Integration ensures rapid code integration and testing, enabling developers to detect and fix issues quickly, thus accelerating the development cycle.</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 img-center">
         <img src="/images/home/fastest-CICD.gif" alt="Continuous Integration" class="img-responsive">
       </div>
     </div>
   </div>
 
-  <div class="container feature-section-home bg-light">
+  <div class="container feature-section-home">
     <div class="row">
-      <div class="col-md-6 order-md-2">
+      <div class="col-md-6 img-center hide-in-mobile">
         <img src="/images/home/continuous-deployment-with-ArgoCD.webp" alt="Continuous Deployment" class="img-responsive">
       </div>
-      <div class="col-md-6 order-md-1">
+      <div class="col-md-6">
         <h2>Continuous Deployment with ArgoCD</h2>
         <p>Continuous Deployment with ArgoCD automates app delivery, instantly deploying every change to production post-tests, ensuring a streamlined and efficient workflow.</p>
+      </div>
+      <div class="col-md-6 img-center hide-in-laptop">
+        <img src="/images/home/continuous-deployment-with-ArgoCD.webp" alt="Continuous Deployment" class="img-responsive">
       </div>
     </div>
   </div>
@@ -90,7 +108,7 @@
         <p>A security-conscious CI/CD pipeline integrates security checks at every stage, ensuring code integrity, vulnerability scanning, and compliance for safe and reliable software delivery.</p>
         <a href="/security-conscious-CICD-pipeline.html" class="btn btn-primary">Get Secure CICD</a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 img-center">
         <img src="/images/home/security-conscious-ci-cd-pipeline.webp" alt="dedicated application security pipeline" class="img-responsive">
       </div>
     </div>
